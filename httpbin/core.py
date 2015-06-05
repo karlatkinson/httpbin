@@ -442,7 +442,7 @@ def digest_auth(qop=None, user='user', passwd='passwd'):
 @app.route('/delay/<int:delay>')
 def delay_response(delay):
     """Returns a delayed response"""
-    delay = min(delay, 10)
+    delay = min(delay, 60)
 
     time.sleep(delay)
 
